@@ -47,3 +47,11 @@ class Cola:
     # Obtener el tamaño de la cola
     def size(self):
         return self.tamaño
+# Ejemplo de uso
+if __name__ == "__main__":
+    cola = Cola()
+
+    # Agregar elementos a la cola
+    cola.enqueue(10)
+    cola.enqueue(20)
+    cola.enqueue(30)
