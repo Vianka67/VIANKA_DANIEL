@@ -55,3 +55,23 @@ if __name__ == "__main__":
     cola.enqueue(10)
     cola.enqueue(20)
     cola.enqueue(30)
+
+    print("Frente de la cola:", cola.front())  # Debería ser 10
+    print("Tamaño de la cola:", cola.size())  # Debería ser 3
+
+    # Desencolar un elemento
+    print("Desencolando:", cola.dequeue())  # Debería ser 10
+
+    # Ver el frente después de desencolar
+    print("Nuevo frente de la cola:", cola.front())  # Debería ser 20
+    print("Tamaño de la cola:", cola.size())  # Debería ser 2
+
+    # Verificar si la cola está vacía
+    print("¿Está la cola vacía?", cola.isEmpty())  # Debería ser False
+
+    # Desencolar todos los elementos
+    print("Desencolando:", cola.dequeue())  # 20
+    print("Desencolando:", cola.dequeue())  # 30
+
+    # Verificar si la cola está vacía
+    print("¿Está la cola vacía?", cola.isEmpty())  # Debería ser True
