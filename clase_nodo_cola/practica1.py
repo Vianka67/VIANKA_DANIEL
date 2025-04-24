@@ -29,3 +29,21 @@ class Cola:
             self.final = None  # Si la cola quedó vacía, final también es None
         self.tamaño -= 1
         return valor
+    
+# Ver el valor del primer elemento (sin eliminarlo)
+    def front(self):
+        if self.isEmpty():
+            raise IndexError("La cola está vacía")
+        return self.frente.valor
+
+    # Ver el valor del primer elemento (sin eliminarlo)
+    def peek(self):
+        return self.front()  # 'peek' es lo mismo que 'front'
+
+    # Comprobar si la cola está vacía
+    def isEmpty(self):
+        return self.tamaño == 0
+
+    # Obtener el tamaño de la cola
+    def size(self):
+        return self.tamaño
