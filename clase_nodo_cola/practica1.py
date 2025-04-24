@@ -18,3 +18,14 @@ class Cola:
             self.final.siguiente = nuevo_nodo  # Conectamos el nodo al final
             self.final = nuevo_nodo  # Ahora el nuevo nodo es el final de la cola
         self.tamaño += 1
+        
+# Desencolar (eliminar el elemento del frente de la cola)
+    def dequeue(self):
+        if self.isEmpty():
+            raise IndexError("La cola está vacía")
+        valor = self.frente.valor  # Guardamos el valor del nodo al frente
+        self.frente = self.frente.siguiente  # El frente se mueve al siguiente nodo
+        if self.frente is None:
+            self.final = None  # Si la cola quedó vacía, final también es None
+        self.tamaño -= 1
+        return valor
